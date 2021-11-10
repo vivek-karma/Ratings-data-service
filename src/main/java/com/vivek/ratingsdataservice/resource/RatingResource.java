@@ -1,5 +1,6 @@
 package com.vivek.ratingsdataservice.resource;
 
+import com.vivek.ratingsdataservice.model.Rating;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -8,7 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class RatingResource {
 
     @RequestMapping("{movieName}")
-    public Integer getRating(String movie){
-        return  4;
+    public Rating getRating(String movie){
+
+        return  new Rating(4);
+
     }
 }
